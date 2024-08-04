@@ -11,4 +11,10 @@ class TaskController extends Controller
         $tasks = Task::all();
         return response()->json($tasks);
     }
+
+    public function getTaskById($id){
+        $task = Task::find($id);
+        return response()->json($task);
+    }
 }
+
