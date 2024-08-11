@@ -33,7 +33,7 @@ class TaskController extends Controller
             return response()->json(['error'=>'Task not found'],404);
         }
         
-        $task->update([$request->validated()]);
+        $task->update($request->validated());
         return response()->json(['message'=>'Task updated with success !'],200);
     }
     public function deleteTask(Request $request,$id){
